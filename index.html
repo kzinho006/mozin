@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Minha Namorada</title>
+    <style>
+       
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("video/fundo.gif") no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+            position: relative;
+            
+        }
+        header h1 {
+            font-size: 4em;
+            margin-bottom: 0.5em;
+        }
+        header p {
+            font-size: 1.5em;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+       
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ff1493;
+            padding: 10px 0;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            background-color: #ff69b4;
+            transform: translateY(-2px);
+        }
+
+       
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+       
+        .section {
+            margin-bottom: 60px;
+        }
+        .section h2 {
+            text-align: center;
+            color: #ff1493;
+            margin-bottom: 20px;
+            font-size: 2em;
+            position: relative;
+        }
+        .section h2::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: #ff1493;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+       
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            cursor: pointer;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .gallery-item img, .gallery-item video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .gallery-item::before {
+            content: "Clique para expandir";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .gallery-item:hover::before {
+            opacity: 1;
+        }
+
+        
+        .info {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .info h2 {
+            color: #ff1493;
+            margin-bottom: 10px;
+        }
+        .info p {
+            margin-bottom: 10px;
+        }
+
+        
+        .links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .links a {
+            color: #ff1493;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            transition: color 0.3s, text-decoration 0.3s;
+        }
+        .links a:hover {
+            color: #ff69b4;
+            text-decoration: underline;
+        }
+
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff1493;
+            color: white;
+            border-top: 2px solid #fff;
+        }
+
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                padding: 15px;
+                text-align: center;
+            }
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="fade-in">
+        <h1>Para Minha Namorada</h1>
+        <p>Uma celebração das nossas memórias e momentos especiais.</p>
+    </header>
+
+    <nav class="fade-in">
+        <a href="#photos">Fotos</a>
+        <a href="#videos">Vídeos</a>
+        <a href="#info">Sobre Nós</a>
+        <a href="#links">Links</a>
+    </nav>
+
+    <div class="container">
+        <div id="photos" class="section">
+            <h2>Memórias Em Fotos</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="imagem/imagem1.jpeg" alt="Foto 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="imagem/imagem8.jpeg" alt="Foto 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="imagem/imagem3.jpeg" alt="Foto 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="imagem/imagem9.jpeg" alt="Foto 4">
+                </div>
+            </div>
+        </div>
+
+        <div id="videos" class="section">
+            <h2>Nossos Momentos Em Vídeos</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <video controls>
+                        <source src="video/InShot_20240513_003948764.mp4" type="video/mp4">
+                        Seu navegador não suporta a tag de vídeo.
+                    </video>
+                </div>
+                <div class="gallery-item">
+                    <video controls>
+                        <source src="video/InShot_20240513_005323081.mp4" type="video/mp4">
+                        Seu navegador não suporta a tag de vídeo.
+                    </video>
+                </div>
+                <div class="gallery-item">
+                    <video controls>
+                        <source src="video/VID-20240518-WA0077.mp4" type="video/mp4">
+                        Seu navegador não suporta a tag de vídeo.
+                    </video>
+                </div>
+                <div class="gallery-item">
+                    <video controls>
+                        <source src="video/WhatsApp Video 2024-08-23 at 19.37.49.mp4 " type="video/mp4">
+                        Seu navegador não suporta a tag de vídeo.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div id="info" class="section info">
+            <h2>Sobre Nós</h2>
+            <center><p>No começo tanto eu quanto vc pensávamos que n passaríamos de uma ficada ou outra, mas <br>
+                 na primeira semana ja estávamos desenvolvendo sentimentos um pelo outro, você que <br>
+                  tinha saído de um relacionamento que não deu certo e eu que não acreditava mais no <br> amor, 
+                   fomos nos conhecendo e percebendo o quão parecidos nós somos, sou grato por <br> tudo que você já 
+                    fez e continua fazendo por mim e EU SOU TÃO APAIXONADO POR VC QUE EU NÃO <br>
+                     CONSIGO FICAR DE MAL ASSIM COMO VOCÊ FICA COMIGO.</p></center>
+            <center><p>Cada momento ao seu lado é uma página inesquecível do nosso livro de amor, <br>
+                 e cada capítulo revela um pouco mais da eternidade que quero passar contigo.</p></center>
+        </div>
+
+        <div id="links" class="section info">
+            <center><h2>Links Importantes</h2></center>
+            <a href="index2.html">Romance vintage</a><br>
+            <a href="index3.html">Carta de amor</a>
+            <a href="" target="_blank"></a>
+        </div>
+    </div>
+
+    <footer class="fade-in">
+        <p>Com amor, Kauan</p>
